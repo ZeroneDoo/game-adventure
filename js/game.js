@@ -75,7 +75,7 @@ function gameLoop(){
 		gerakLevel(game.hero, 0, -10)
 	}
 
-	// latar(dataGambar.bg, 0, 0.5);
+	latar(dataGambar.bg, -1, 0);
 	buatLevel()
 	resizeBtn(1150,50);
 }
