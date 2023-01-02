@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
 	<title>Judul Game</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+	<script type="text/javascript" src="https://www.wandah.org/js/gameLib.js"></script>       
+	<script src="js/sweetAlert.js"></script>
     <style>
-html,body { margin: 0;overflow: hidden;}
-canvas{ padding: 0; margin: auto; display: block; width:100%;}
-#gameArea {width:80%; position:absolute;}
-#game {margin:50px;}
+		html,body { margin: 0;overflow: hidden;}
+		canvas{ padding: 0; margin: auto; display: block; width:100%;}
+		#gameArea {width:80%; position:absolute;}
+		#game {margin:50px;}
+
+.swal2-modal {
+	border: 3px solid white;
+	background: url(assets/1.png);
+	background-size:cover ;
+	border: none;
+	width: 56%;
+	height: 56%;
+	
+
+  }
+  .swal2-overlay {
+	background-color: rgba(0, 0, 0, 0.45);
+  }
+  
+  
+  .swal2-title{
+	font-size: 70px;
+	font-style: normal;
+	font-weight: normal;
+	position: relative;
+	top: 30%;
+	right: 6%;
+	font-family: VT323;
+	color: white;
+  }
+  
+  .position-absolute {
+	position: absolute !important;
+	
+  }
+  #custom-target {
+	position: relative;
+	width: 300px;
+	height: 200px;
+	border-style: solid;
+  }
 	</style>
- 	<script type="text/javascript" src="https://www.wandah.org/js/gameLib.js"></script>       
 </head>
 <body>
 <div id="game">

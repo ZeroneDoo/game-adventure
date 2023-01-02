@@ -14,7 +14,7 @@ var gambar = {
 	fall: "Fall.png",
 	hit:"Hit.png",
 	tileset:"Terrain.png",
-	bg:"Gray.png",
+	bg:"latar.jpg",
 	item1:"Strawberry.png",
 	jamurIdle:"enemy1Idle.png",
 	jamurRun:"enemy1Run.png",
@@ -115,7 +115,17 @@ function cekItem(){
 		game.triggerID = 0
 		game.aktif = false
 		game.level += 1
-		jalankan(tampilkanGambar(dataGambar.logo, 600, 250))
-		setTimeout(ulangiPermainan, 2000)
+		jalankan(
+			swal.fire({
+				title:'SCORE : ' + game.score,
+				timer: 3000,
+				buttons: false,
+				target: '#gameArea',
+				showCancelButton: false,
+				showConfirmButton: false, 
+				className:'modals'
+			})
+		)
+		setTimeout(ulangiPermainan, 3000)
 	}
 }
