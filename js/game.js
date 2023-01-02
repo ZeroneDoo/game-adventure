@@ -23,6 +23,10 @@ var gambar = {
 }
 //file suara yang dipakai dalam game
 var suara = {
+	backsound:"main.mp3",
+	dead:"playerDead.mp3",
+	coin:"coin2.wav",
+	injek:"injek.wav"
 }
 
 //load gambar dan suara lalu jalankan startScreen
@@ -49,7 +53,9 @@ function halamanCover(){
 }
 
 function setAwal(){
+	// memulai musik
 	game.hero = setSprite(dataGambar.idle,32,32); // menseting gambar hero atau player
+	musik(dataSuara.backsound)
 	game.hero.animDiam = dataGambar.idle; //memunculkan hero
 	game.hero.animJalan = dataGambar.run;
 	game.hero.animLompat = dataGambar.jump;
@@ -80,9 +86,14 @@ function setAwal(){
 // mengulang permainan
 function ulangiPermainan(){
 	game.aktif = true
+	game.score = 0
 	setAwal()
 	jalankan(gameLoop)
-	game.score = 0
+
+	// memulai musik mati
+	setTimeout(()=>{
+		game.musik.play()
+	}, 1000)
 }
 
 function gameLoop(){
@@ -106,6 +117,7 @@ function gameLoop(){
 // menambahkan point jika player mengenai lawan
 function cekItem(){
 	if(game.itemID > 0){
+		mainkanSuara(dataSuara.coin)
 		tambahScore(10)
 		game.itemID = 0
 	}
@@ -126,6 +138,7 @@ function cekItem(){
 				className:'modals'
 			})
 		)
+		game.musik.stop()
 		setTimeout(ulangiPermainan, 3000)
 	}
 }
