@@ -30,17 +30,17 @@ var suara = {
 }
 
 //load gambar dan suara lalu jalankan startScreen
-loading(gambar, suara, startScreen);
+loading(gambar, suara, halamanCover);
 
-function startScreen(){	
-	hapusLayar("#333333");
-	tampilkanGambar(dataGambar.logo, 600, 250);
-	var startBtn = tombol(dataGambar.startBtn, 600, 350);
-	if (tekan(startBtn)){
-		jalankan(halamanCover);
-	}
-	resizeBtn(1150,50);
-}
+// function startScreen(){	
+// 	hapusLayar("#333333");
+// 	tampilkanGambar(dataGambar.logo, 600, 250);
+// 	var startBtn = tombol(dataGambar.startBtn, 600, 350);
+// 	if (tekan(startBtn)){
+// 		jalankan(halamanCover);
+// 	}
+// 	resizeBtn(1150,50);
+// }
 function halamanCover(){
 	hapusLayar("#333333");
 	gambarFull(dataGambar.cover);
