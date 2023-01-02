@@ -115,6 +115,7 @@ function cekItem(){
 		game.triggerID = 0
 		game.aktif = false
 		game.level += 1
+		jalankan(tampilkanGambar(dataGambar.logo, 600, 250))
 		setTimeout(ulangiPermainan, 2000)
 	}
 }
